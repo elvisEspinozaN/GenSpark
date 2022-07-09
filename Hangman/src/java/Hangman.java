@@ -5,23 +5,21 @@ public class Hangman {
     static Scanner ui= new Scanner(System.in);
 
     int attempt= 0;
-    boolean gmaeDone= false;
+    boolean gameDone= false;
     static boolean play= true;
+    String wordToFind;
 
     List<Character> playerGuesses= new ArrayList<>();
 
     public static void main(String[] args) {
         Hangman hm= new Hangman();
-        while(play) {
-            hm.play();
-        }
+        hm.play();
     }
 
     public void play() {
-
-        String wordToFind = getRandomWord();
+        wordToFind= getRandomWord();
         try{
-            while(!gmaeDone) {
+            while(!gameDone) {
                 System.out.println("H A N G M A N");
                 printGallows(attempt);
                 if(attempt>= 5) {
@@ -38,18 +36,16 @@ public class Hangman {
                     System.out.println("\nDo you want to play again? (yes or no)");
                     play= ui.nextLine().trim().equalsIgnoreCase("yes");
                     if(play) {
-                        gmaeDone= false;
+                        attempt= 0;
                         playerGuesses.clear();
                         wordToFind= getRandomWord();
-                        attempt= 0;
                     } else {
                         break;
                     }
                 }
-
             }
         } catch(Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Enter a LETTER");
         }
     }
 
