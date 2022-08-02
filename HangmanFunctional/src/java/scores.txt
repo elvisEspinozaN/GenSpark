@@ -1,0 +1,3 @@
+elvis:10
+sophia:15
+mo:5
