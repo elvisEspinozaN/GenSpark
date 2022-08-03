@@ -39,7 +39,7 @@
 <!--    </bean>-->
 
 <!--    Constructor Injection-->
-    <bean id="student" class="org.genspark.Student">
+    <bean id="student" scope="prototype" class="org.genspark.Student">
         <constructor-arg index="0" value="456456" />
         <constructor-arg index="1" value="Jane Doe" />
         <constructor-arg index="2">
