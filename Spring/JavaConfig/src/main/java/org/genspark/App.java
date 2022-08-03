@@ -1,13 +1,14 @@
 package org.genspark;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        AbstractApplicationContext context= new AnnotationConfigApplicationContext(AppConfig.class);
+        Student obj= (Student) context.getBean(Student.class);
+        System.out.println(obj);
     }
 }
