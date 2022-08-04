@@ -49,13 +49,13 @@ public class Hangman {
         }
     }
 
-    String getRandomWord() {
+    public String getRandomWord() {
         Random rand= new Random(); // get random word from 'words arr'
         int randInt= rand.nextInt(words.length);
         return words[randInt];
     }
 
-    private static boolean printGuessingState(String wordToFind, List<Character> playerGuesses) {
+    private boolean printGuessingState(String wordToFind, List<Character> playerGuesses) {
         int correctCount= 0;
 
         for(int i= 0; i< wordToFind.length(); i++) { // if user input matches a letter, insert into blank spaces
@@ -71,7 +71,7 @@ public class Hangman {
         return (wordToFind.length()== correctCount); // return true if user is able to enter all correct letters
     }
 
-    private static boolean getPlayerInput(Scanner ui, String wordToFind, List<Character> playerGuesses) {
+    public boolean getPlayerInput(Scanner ui, String wordToFind, List<Character> playerGuesses) {
         System.out.println("Guess a letter: ");
         String guessInput= ui.nextLine();
         playerGuesses.add(guessInput.charAt(0)); // takes the first letter of a user input
@@ -79,7 +79,7 @@ public class Hangman {
         return (wordToFind.contains(guessInput));
     }
 
-    public static void printGallows(int attempt) {
+    public void printGallows(int attempt) {
         System.out.println("      _______");
         switch (attempt) {
             case 1:
