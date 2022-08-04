@@ -1,17 +1,16 @@
 package org.genspark;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class Student {
+public class Student{
     private int id;
     private String name;
     @Autowired
-    private List<Phone> ph;
+    List<Phone> ph;
     @Autowired
     private Address add;
 
@@ -29,6 +28,22 @@ public class Student {
 
     public void setAdd(Address add) {
         this.add = add;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Phone> getPh() {
+        return ph;
+    }
+
+    public Address getAdd() {
+        return add;
     }
 
     @Override
