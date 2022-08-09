@@ -3,9 +3,7 @@ package com.genspark.Employee.Controller;
 import com.genspark.Employee.Entity.Employee;
 import com.genspark.Employee.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,6 +25,11 @@ public class MyController {
     @GetMapping("/employees/{employeeId}")
     public Employee getEmployee(@PathVariable String employeeId) {
         return this.employeeService.getEmployeeById(Integer.parseInt(employeeId));
+    }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee employee) { // request HTML body
+        return this.employeeService.addEmployee(employee);
     }
 
 }

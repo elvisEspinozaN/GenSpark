@@ -35,4 +35,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return e;
     }
+
+    @Override
+    public Employee addEmployee(Employee employee) {
+        list.add(employee);
+        return employee;
+    }
 }
