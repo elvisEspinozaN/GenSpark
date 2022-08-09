@@ -58,6 +58,33 @@ public class Employee {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+
+        Employee employee = (Employee) o;
+
+        if (getEmpId() != employee.getEmpId()) return false;
+        if (getEmpFName() != null ? !getEmpFName().equals(employee.getEmpFName()) : employee.getEmpFName() != null)
+            return false;
+        if (getEmpLName() != null ? !getEmpLName().equals(employee.getEmpLName()) : employee.getEmpLName() != null)
+            return false;
+        if (getEmpPhone() != null ? !getEmpPhone().equals(employee.getEmpPhone()) : employee.getEmpPhone() != null)
+            return false;
+        return getEmpEmail() != null ? getEmpEmail().equals(employee.getEmpEmail()) : employee.getEmpEmail() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getEmpId();
+        result = 31 * result + (getEmpFName() != null ? getEmpFName().hashCode() : 0);
+        result = 31 * result + (getEmpLName() != null ? getEmpLName().hashCode() : 0);
+        result = 31 * result + (getEmpPhone() != null ? getEmpPhone().hashCode() : 0);
+        result = 31 * result + (getEmpEmail() != null ? getEmpEmail().hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Employee{" +
                 "empId=" + empId +

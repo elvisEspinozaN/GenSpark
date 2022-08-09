@@ -37,4 +37,9 @@ public class MyController {
         return this.employeeService.updateEmployee(employee);
     }
 
+    @DeleteMapping("/employees/{employeeId}")
+    public String deleteEmployee(@PathVariable String employeeId) {
+        return this.employeeService.deleteEmployeeById(Integer.parseInt(employeeId));
+    }
+
 }

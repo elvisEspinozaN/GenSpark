@@ -64,4 +64,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return e;
     }
+
+    @Override
+    public String deleteEmployeeById(int employeeId) {
+        for(Employee employee: list) {
+            list.remove(employee);
+            break;
+        }
+        return "DELETED";
+    }
 }

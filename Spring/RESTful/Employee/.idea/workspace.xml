@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Land.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HumansVSGoblins/src/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Controller/MyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Service/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/genspark/Employee/Service/EmployeeServiceImpl.java" afterDir="false" />
     </list>
