@@ -41,4 +41,27 @@ public class EmployeeServiceImpl implements EmployeeService {
         list.add(employee);
         return employee;
     }
+
+    @Override
+    public Employee updateEmployee(Employee employee) {
+        String empFname= employee.getEmpFName();
+        String empLname= employee.getEmpLName();
+        String empPhone= employee.getEmpPhone();
+        String empEmail= employee.getEmpEmail();
+
+        Employee e= null;
+
+        for(Employee emp : list) {
+            if(emp.getEmpId()== employee.getEmpId()) { // if they match take it
+                emp.setEmpFName(empFname);
+                emp.setEmpLName(empLname);
+                emp.setEmpPhone(empPhone);
+                emp.setEmpEmail(empEmail);
+
+                e= emp;
+                break;
+            }
+        }
+        return e;
+    }
 }
