@@ -24,4 +24,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> getAllEmployees() {
         return list;
     }
+
+    @Override
+    public Employee getEmployeeById(int employeeId) {
+        Employee e= null;
+
+        for(Employee employee: list) { // looks through the list for the specific id
+            e= employee; //  if it matches :: passes all data -> to another obj
+            break;
+        }
+        return e;
+    }
 }
