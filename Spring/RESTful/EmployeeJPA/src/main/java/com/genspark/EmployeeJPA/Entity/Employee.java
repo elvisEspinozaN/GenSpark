@@ -1,6 +1,15 @@
 package com.genspark.EmployeeJPA.Entity;
 
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.*;
+
+@Entity // this is my entity class
+@Table(name="tbl_employees") // custom name
 public class Employee {
+    @Id
+    @Column(name="c_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int empId;
     private String empFName;
     private String empLName;
@@ -10,8 +19,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int empId, String empFName, String empLName, String empPhone, String empEmail) {
-        this.empId = empId;
+    public Employee(String empFName, String empLName, String empPhone, String empEmail) {
         this.empFName = empFName;
         this.empLName = empLName;
         this.empPhone = empPhone;
