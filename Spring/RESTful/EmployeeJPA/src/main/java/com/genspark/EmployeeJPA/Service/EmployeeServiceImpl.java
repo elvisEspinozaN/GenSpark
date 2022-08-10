@@ -2,6 +2,7 @@ package com.genspark.EmployeeJPA.Service;
 
 import com.genspark.EmployeeJPA.Dao.EmployeeDao;
 import com.genspark.EmployeeJPA.Entity.Employee;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
     private EmployeeDao employeeDao;
 
     @Override
