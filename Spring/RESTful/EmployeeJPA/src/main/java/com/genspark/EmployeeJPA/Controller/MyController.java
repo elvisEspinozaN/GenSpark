@@ -33,7 +33,7 @@ public class MyController {
     }
 
     @PutMapping("/employee")
-    public Employee updateEmplyee(@RequestBody Employee employee) {
+    public Employee updateEmployee(@RequestBody Employee employee) {
         return this.employeeService.addEmployee(employee);
     }
 

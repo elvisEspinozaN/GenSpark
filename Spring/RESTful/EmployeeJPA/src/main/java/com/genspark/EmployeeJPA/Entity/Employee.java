@@ -1,7 +1,5 @@
 package com.genspark.EmployeeJPA.Entity;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 
 @Entity // this is my entity class
