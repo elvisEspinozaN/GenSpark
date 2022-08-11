@@ -1,0 +1,16 @@
+<!--<?xml version="1.0"?>-->
+<!--<!DOCTYPE hibernate-mapping PUBLIC-->
+<!--        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-mapping">-->
+<!--<hibernate-mapping>-->
+
+<!--    <class name="org.genspark.Entity.Employee" table="tbl_employee">-->
+<!--        <id name="empId">-->
+<!--            <generator class="assigned"></generator>-->
+<!--        </id>-->
+
+<!--        <property name="empName"></property>-->
+<!--        <property name="empDept"></property>-->
+
+<!--    </class>-->
+<!--</hibernate-mapping>-->
