@@ -1,6 +1,7 @@
 package com.genspark.EmployeeJPA.Controller;
 
 import com.genspark.EmployeeJPA.Entity.Employee;
+import com.genspark.EmployeeJPA.Service.EmailSenderService;
 import com.genspark.EmployeeJPA.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,9 @@ import java.util.List;
 public class MyController {
     @Autowired
     private EmployeeService employeeService;
+
+    @Autowired
+    private EmailSenderService senderService;
 
     @GetMapping("/")
     private String home() {
@@ -41,4 +45,10 @@ public class MyController {
     public String deleteEmployee(@PathVariable String employeeId) {
         return this.employeeService.deleteEmployeeById(Integer.parseInt(employeeId));
     }
+
+    @GetMapping("/sendMail")
+    public void sendEmail() {
+        senderService.sendEmail("elvisespinoza98@gmail.com", "TESTING", "TEST");
+    }
+
 }
